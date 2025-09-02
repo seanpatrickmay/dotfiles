@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/seanmay/.config/nvim.bak'
+let g:netrw_dirhist_7='/Users/seanmay/.config/nvim'
+let g:netrw_dirhist_6='/Users/seanmay/Desktop/Current Projects/CFR-Exploration'
+let g:netrw_dirhist_5='/Users/seanmay/Desktop/Current Projects/Human-Digit-Recognition'
+let g:netrw_dirhist_4='/Users/seanmay/Desktop/Current Projects'
+let g:netrw_dirhist_3='/Users/seanmay/Desktop/Current Projects/Human-Digit-Recognition'
+let g:netrw_dirhist_2='/Users/seanmay/Desktop/Current Projects/Digit-Recognition-Website'
+let g:netrw_dirhist_1='/Users/seanmay/Desktop/Current Projects/Human-Digit-Recognition-Website/website'

@@ -225,3 +225,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_KEY="your-key-here"
 
 alias ccd="claude --dangerously-skip-permissions"
+
+# Source local machine-specific overrides (not tracked in this repo)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

@@ -1,19 +1,18 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+-- Auto-sync on first run (no packer_compiled.lua yet)
+local first_run = not vim.loop.fs_stat(
+    vim.fn.stdpath('config') .. '/plugin/packer_compiled.lua'
+)
+
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.8',
--- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- lua/plugins/rose-pine.lua
   use({
 	"rose-pine/neovim",
 	as = "rose-pine",
@@ -33,4 +32,8 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       require = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  if first_run then
+      require('packer').sync()
+  end
 end)

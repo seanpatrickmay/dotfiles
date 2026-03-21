@@ -1,4 +1,5 @@
 require("seanmay.remap")
+require("seanmay.packer")
 
 -- Status Line Settings
 vim.opt.laststatus = 2

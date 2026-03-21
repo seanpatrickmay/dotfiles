@@ -15,5 +15,5 @@ else
     ensure_installed = {"javascript", "typescript", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
     auto_install = true,
   }
-  vim.treesitter.start()
+  pcall(vim.treesitter.start)
 end

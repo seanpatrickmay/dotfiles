@@ -2,6 +2,9 @@
 alias vim=nvim
 alias vi=nvim
 
+# Claude Code Config
+export CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=75
+
 # Claude Code Aliases
 alias cc='claude'
 alias ccp='claude --plan'
@@ -225,6 +228,3 @@ export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_KEY="your-key-here"
 
 alias ccd="claude --dangerously-skip-permissions"
-
-# Source local machine-specific overrides (not tracked in this repo)
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

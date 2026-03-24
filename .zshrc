@@ -228,3 +228,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_KEY="your-key-here"
 
 alias ccd="claude --dangerously-skip-permissions"
+
+# VCC: Source local config (nvm, env vars, server utilities)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

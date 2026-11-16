@@ -1,0 +1,3 @@
+# Everything is ignored by default; the home dir is not a project.
+*
+!.gitignore

@@ -5,13 +5,22 @@ alias vi=nvim
 # Claude Code Config
 export CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=75
 
-# Claude Code Aliases
+# Claude Code Aliases — Personal (Max subscription, default ~/.claude)
 alias cc='claude'
 alias ccp='claude --plan'
 alias cch='claude --help'
 alias ccr='claude review'
-alias ccs='claude status'
+alias ccst='claude status'
+alias ccd='claude --dangerously-skip-permissions'
 alias ccrd='claude --resume --dangerously-skip-permissions'
+
+# Claude Code Aliases — Work (~/.claude-work)
+alias ccdw='CLAUDE_CONFIG_DIR=~/.claude-work claude --dangerously-skip-permissions'
+alias ccrdw='CLAUDE_CONFIG_DIR=~/.claude-work claude --resume --dangerously-skip-permissions'
+
+# Claude Code Aliases — School (~/.claude-school)
+alias ccds='CLAUDE_CONFIG_DIR=~/.claude-school claude --dangerously-skip-permissions'
+alias ccrds='CLAUDE_CONFIG_DIR=~/.claude-school claude --resume --dangerously-skip-permissions'
 
 # Development Shortcuts
 alias dev='npm run dev'
@@ -26,12 +35,11 @@ alias gd='git diff'
 alias gl='git log --oneline -10'
 
 # Project Navigation
-alias proj='cd ~/Desktop/Current\ Projects'
-alias life='cd ~/Desktop/Current\ Projects/Life-Dashboard'
-alias comic='cd ~/Desktop/Current\ Projects/comic'
-alias news='cd ~/Desktop/Current\ Projects/news-scraping'
-alias study='cd ~/Desktop/Current\ Projects/study-buddy'
-alias wild='cd ~/Desktop/Current\ Projects/wildfire-prediction'
+alias proj='cd ~/Desktop/CurrentProjects'
+alias life='cd ~/Desktop/CurrentProjects/Life-Dashboard'
+alias comic='cd ~/Desktop/CurrentProjects/comic'
+alias news='cd ~/Desktop/CurrentProjects/data-scraper'
+alias wild='cd ~/Desktop/CurrentProjects/wildfire-prediction'
 
 # Claude Scripts
 alias claude-setup='~/.claude/scripts/auto-setup.sh'
@@ -114,6 +122,7 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -225,9 +234,7 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 export PATH="$HOME/.local/bin:$PATH"
-export OPENAI_API_KEY="your-key-here"
-
-alias ccd="claude --dangerously-skip-permissions"
+eval "$(mise activate zsh)"
 
 # VCC: Source local config (nvm, env vars, server utilities)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

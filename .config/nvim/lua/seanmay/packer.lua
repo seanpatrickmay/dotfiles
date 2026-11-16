@@ -33,6 +33,14 @@ return require('packer').startup(function(use)
       require = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use {
+      'OXY2DEV/markview.nvim',
+      requires = {
+          'nvim-treesitter/nvim-treesitter',
+          'nvim-tree/nvim-web-devicons',
+      },
+  }
+
   if first_run then
       require('packer').sync()
   end
